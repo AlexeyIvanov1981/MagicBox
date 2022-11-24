@@ -18,10 +18,13 @@ public class MagicBox<T> {
     }
 
     //todo
-//    public boolean pick(){
-//
-//
-//        return false;
-//
-//    }
+    public T pick(T[] items){
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] == null) {
+                return ;
+            }
+        }
+        return;
+
+    }
 }
