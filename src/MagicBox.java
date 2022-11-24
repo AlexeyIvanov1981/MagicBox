@@ -16,4 +16,12 @@ public class MagicBox<T> {
         System.out.println("Magic box is full");
         return false;
     }
+
+    //todo
+//    public boolean pick(){
+//
+//
+//        return false;
+//
+//    }
 }
