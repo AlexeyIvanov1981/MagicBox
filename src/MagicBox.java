@@ -1,15 +1,15 @@
-public class MagicBox {
+public class MagicBox<T> {
 
-    public int[] item;
+    T[] items;
 
     public MagicBox(int countItem ){
-        this.item = new int[countItem];
+        T[] items = (T[]) new Object[countItem];
     }
 
-    boolean add(int item){
-        for (int i = 0; i < this.item.length; i++) {
-            if(this.item[i] != 0) {
-                this.item[i] = item;
+    boolean add(T item){
+        for (int i = 0; i < items.length; i++) {
+            if(items[i] != null) {
+                items[i] = item;
                 return true;
             }
         }
