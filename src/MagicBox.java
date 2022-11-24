@@ -1,3 +1,4 @@
+import RuntimeExceptionForMagicBox.IsFull;
 import RuntimeExceptionForMagicBox.IsNotFull;
 
 public class MagicBox<T> {
@@ -20,10 +21,11 @@ public class MagicBox<T> {
     }
 
     //todo
-    public void pick(T[] items){
+    public <T> T pick(T[] items, T answer1, T answer2){
         for (int i = 0; i < items.length; i++) {
             if (items[i] == null) {
+                throw new IsNotFull();
             }
-        }
+        } throw new IsFull();
     }
 }
