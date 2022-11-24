@@ -8,11 +8,12 @@ public class MagicBox {
 
     boolean add(int item){
         for (int i = 0; i < this.item.length; i++) {
-            if(this.item[i] != 0){
+            if(this.item[i] != 0) {
                 this.item[i] = item;
                 return true;
             }
         }
+        System.out.println("Magic box is full");
         return false;
     }
 }
