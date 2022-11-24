@@ -1,7 +1,7 @@
 package RuntimeExceptionForMagicBox;
 
 public class IsFull extends RuntimeException {
-    public IsFull(){
+    public IsFull() {
         super("Magic box is full");
     }
 }
