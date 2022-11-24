@@ -9,23 +9,27 @@ public class MagicBox<T> {
 
     public MagicBox(int countItem ){
         T[] items = (T[]) new Object[countItem];
+        this.items = items;
         System.out.println("Array is: " + Arrays.deepToString(items));
     }
 
     public boolean add(T item){
-        for (int i = 0; i < items.length ; i++) {
-            if(this.items[i].equals(null)) {
+        for (int i = 0; i < this.items.length ; i++) {
+            if(this.items[i] == null) {
                 this.items[i] = item;
+                System.out.println("item added");
+                System.out.println("Array is: " + Arrays.deepToString(items));
                 return true;
             }
         }
+        System.out.println("item not added");
         return false;
     }
 
     //todo ((((
-    public <T> T pick(T[] items){
-        for (int i = 0; i < items.length; i++) {
-            if (items[i] == null) {
+    public <T> T pick(){
+        for (int i = 0; i < this.items.length; i++) {
+            if (this.items[i] == null) {
                 throw new IsNotFull();
             }
         } throw new IsFull();
