@@ -25,7 +25,7 @@ public class MagicBox<T> {
         return false;
     }
 
-    public <T> void pick() {
+    public <T> T pick() {
         for (int i = 0; i < this.items.length; i++) {
             if (this.items[i] == null) {
                 throw new IsNotFull();
@@ -33,6 +33,6 @@ public class MagicBox<T> {
         }
         Random random = new Random();
         int randomInt = random.nextInt(items.length);
-        System.out.println("Random item is: " + this.items[randomInt]);
+        return (T) ("Random item is: " + this.items[randomInt]);
     }
 }
